@@ -65,7 +65,7 @@ async function searchMic(v) {
   list.value = true;
   loading.value = true;
   songSelect.value = v?.value ?? songSelect.value;
-  const { data: arrMic } = await execute("http://localhost:3000/search", {
+  const { data: arrMic } = await execute("https://www.ajjing.top/search", {
     params: {
       keywords: songSelect.value,
       offset: pageinfo.current - 1
@@ -104,7 +104,7 @@ async function searchMic(v) {
 
 const goMusic = async mid => {
   loading.value = true;
-  const { data: micMp3 } = await execute("http://localhost:3000/song/url/v1", {
+  const { data: micMp3 } = await execute("https://www.ajjing.top/song/url/v1", {
     params: {
       id: mid,
       level: "exhigh"

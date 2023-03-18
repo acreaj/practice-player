@@ -146,7 +146,7 @@ onMounted(() => {
 });
 const getLrc = async () => {
   loading.value = true;
-  const { data: micLyc } = await execute("http://localhost:3000/lyric", {
+  const { data: micLyc } = await execute("https://www.ajjing.top/lyric", {
     params: {
       id: route.query.id
     }
